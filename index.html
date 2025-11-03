@@ -1,0 +1,42 @@
+ 
+ 
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>Login Swag Labs</title>  
+<style>  
+  .correcto {  
+    color: green;  
+    font-weight: bold;  
+  }  
+  .incorrecto {  
+    color: red;  
+    font-weight: bold;  
+  }  
+</style>  
+</head>  
+<body>  
+  <h2>Iniciar sesión - Swag Labs</h2>    <input type="text" id="usuario" placeholder="Usuario">  
+  <br><br>  
+  <input type="password" id="clave" placeholder="Contraseña">  
+  <br><br>  
+  <button onclick="verificar()">Ingresar</button>    <p id="mensaje"></p>    <script>  
+    function verificar() {  
+      const usuario = document.getElementById("usuario").value;  
+      const clave = document.getElementById("clave").value;  
+      const mensaje = document.getElementById("mensaje");  
+  
+      // Datos correctos de ejemplo  
+      const usuarioCorrecto = "standard_user";  
+      const claveCorrecta = "secret_sauce";  
+  
+      if (usuario === usuarioCorrecto && clave === claveCorrecta) {  
+        mensaje.textContent = "Ingreso correcto ✅";  
+        mensaje.className = "correcto";  
+      } else {  
+        mensaje.textContent = "Usuario o contraseña incorrectos ❌";  
+        mensaje.className = "incorrecto";  
+      }  
+    }  
+  </script>  </body>  
+</html>
